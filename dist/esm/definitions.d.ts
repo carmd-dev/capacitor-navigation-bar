@@ -33,13 +33,13 @@ export interface NavigationBarPlugin {
      * @param event The event
      * @param listenerFunc Callback
      */
-    addListener(event: NavigationBarPluginEvents.SHOW, listenerFunc: () => void): PluginListenerHandle;
+    addListener(event: NavigationBarPluginEvents.SHOW, listenerFunc: () => void): Promise<PluginListenerHandle>;
     /**
      * Event fired after navigation bar is hidden
      * @param event The event
      * @param listenerFunc Callback
      */
-    addListener(event: NavigationBarPluginEvents.HIDE, listenerFunc: () => void): PluginListenerHandle;
+    addListener(event: NavigationBarPluginEvents.HIDE, listenerFunc: () => void): Promise<PluginListenerHandle>;
     /**
      * Event fired after navigation bar color is changed
      * @param event The event
@@ -47,7 +47,7 @@ export interface NavigationBarPlugin {
      */
     addListener(event: NavigationBarPluginEvents.COLOR_CHANGE, listenerFunc: (returnObject: {
         color: string;
-    }) => void): PluginListenerHandle;
+    }) => void): Promise<PluginListenerHandle>;
 }
 export interface ColorParameters {
     /**

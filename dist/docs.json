@@ -81,7 +81,7 @@
       },
       {
         "name": "addListener",
-        "signature": "(event: NavigationBarPluginEvents.SHOW, listenerFunc: () => void) => PluginListenerHandle",
+        "signature": "(event: NavigationBarPluginEvents.SHOW, listenerFunc: () => void) => Promise<PluginListenerHandle>",
         "parameters": [
           {
             "name": "event",
@@ -94,7 +94,7 @@
             "type": "() => void"
           }
         ],
-        "returns": "PluginListenerHandle",
+        "returns": "Promise<PluginListenerHandle>",
         "tags": [
           {
             "name": "param",
@@ -114,7 +114,7 @@
       },
       {
         "name": "addListener",
-        "signature": "(event: NavigationBarPluginEvents.HIDE, listenerFunc: () => void) => PluginListenerHandle",
+        "signature": "(event: NavigationBarPluginEvents.HIDE, listenerFunc: () => void) => Promise<PluginListenerHandle>",
         "parameters": [
           {
             "name": "event",
@@ -127,7 +127,7 @@
             "type": "() => void"
           }
         ],
-        "returns": "PluginListenerHandle",
+        "returns": "Promise<PluginListenerHandle>",
         "tags": [
           {
             "name": "param",
@@ -147,7 +147,7 @@
       },
       {
         "name": "addListener",
-        "signature": "(event: NavigationBarPluginEvents.COLOR_CHANGE, listenerFunc: (returnObject: { color: string; }) => void) => PluginListenerHandle",
+        "signature": "(event: NavigationBarPluginEvents.COLOR_CHANGE, listenerFunc: (returnObject: { color: string; }) => void) => Promise<PluginListenerHandle>",
         "parameters": [
           {
             "name": "event",
@@ -160,7 +160,7 @@
             "type": "(returnObject: { color: string; }) => void"
           }
         ],
-        "returns": "PluginListenerHandle",
+        "returns": "Promise<PluginListenerHandle>",
         "tags": [
           {
             "name": "param",
